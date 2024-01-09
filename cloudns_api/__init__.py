@@ -19,6 +19,7 @@ from . import api     # noqa: F401
 from . import record  # noqa: F401
 from . import soa     # noqa: F401
 from . import zone    # noqa: F401
+from . import groups  # noqa: F401
 
 
 __title__ = 'cloudns_api'
