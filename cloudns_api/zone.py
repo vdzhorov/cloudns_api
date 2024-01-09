@@ -268,3 +268,17 @@ def is_updated(domain_name=None):
     params = Parameters({'domain-name': domain_name})
 
     return requests.get(url, params=params.to_dict())
+
+@api
+def delegate(id=None, zone=None):
+    """Delegate zone's management to a sub user
+
+    :param id: int, (required) sub user's ID
+    :param zone: string, (required) name of the zone
+    """
+
+    url = 'https://api.cloudns.net/sub-users/delegate-zone.json'
+
+    params = Parameters({'id': id, 'zone': zone})
+
+    return requests.get(url, params=params.to_dict())
